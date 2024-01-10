@@ -1,0 +1,20 @@
+USE [Db_Adverhouse]
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[USP_Client_Adverhouse_Delete] (@Id INT)
+AS
+
+BEGIN
+	DELETE FROM Tb_Client_Adverhouse
+		WHERE Id = @Id
+	SET NOCOUNT ON;
+END
+GO
+
+
