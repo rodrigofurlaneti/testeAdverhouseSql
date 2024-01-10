@@ -1,0 +1,31 @@
+USE [Db_Adverhouse]
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[USP_Client_Adverhouse_Insert] (	@NomeCliente VARCHAR(150),
+											@RazaoSocial VARCHAR(150),
+											@Cnpj VARCHAR(50),
+											@CodigoCnae VARCHAR(150),
+											@Endereco VARCHAR(150))
+AS
+BEGIN
+	INSERT INTO Tb_Client_Adverhouse(NomeCliente, 
+									RazaoSocial, 
+									Cnpj,
+									CodigoCnae,
+									Endereco)
+            VALUES	(@NomeCliente, 
+					@RazaoSocial, 
+					@Cnpj,
+					@CodigoCnae,
+					@Endereco)
+	SET NOCOUNT ON;
+END
+GO
+
+
